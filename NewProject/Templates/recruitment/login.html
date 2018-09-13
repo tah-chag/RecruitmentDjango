@@ -1,0 +1,16 @@
+{% extends 'base.html'%} #extending the base code for html
+
+{% block body %}
+<div class="container">
+  <h1>Welcome</h1>
+  <p>
+      Please enter your login details
+  </p>
+  <h2>Login</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+  </form>
+</div>
+{% endblock %}
